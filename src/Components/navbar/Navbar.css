@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Poppins,sans-serif;
+}
+
+:root{
+    --bgc_main:gray;
+    --textcolor:#FFF;
+    --textcolor2:orange;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color:var(--bgc_main);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    opacity: .8;
+  }
+  .navbar .logo a{
+    color:var(--textcolor);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .navbar .logo a span{
+    color:var(--textcolor2);
+  }
+  .navbar .logo a > span{
+    font-size: 34px;
+  }
+  .navbar .shoop-icon{
+    position: relative;
+    color: #FFF;
+    top:5px;
+    left: 8px;
+    display: inline-block;
+    font-size: 34px;
+  }
+  .navbar .shoop-icon:hover{
+    color: orange;
+  }
+  .navbar .logo .shoop-icon .nummer-shooping{
+    position: relative;
+    top:-18px;
+    left: 4px;
+    display: inline-block;
+    font-size: 16px;
+    color:var(--textcolor2);
+  }
+  
+  .navbar nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar nav a{
+    text-decoration: none;
+    color: var(--textcolor);
+    padding-left: 1rem;
+    font-weight: bold;
+  }
+  .navbar nav a:hover{
+    color: var(--textcolor2);
+    transition: .5s;
+    transform: scale(1.1);
+  }
+
+  
+  .nav-btn{
+    display: block;
+    visibility:visible;
+    opacity: 1;
+    transition: .5s;
+    font-size: 25px;
+    color: var(--textcolor2);
+  }
+
+  /* Für kleine Bildschirme (Handys) */
+@media only screen and (max-width: 767px) {
+  /* .nav-btn{
+    display: block;
+    visibility:visible;
+    opacity: 1;
+    transition: .5s;
+    font-size: 25px;
+    color: var(--textcolor2);
+  } */
+  .navbar nav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--bgc_main);
+    opacity: .9;
+    font-size: 3.5rem;
+    transition: .5s;
+    transform: translateY(-100%);
+  }
+  .navbar .responsive-nav{
+    transform: translateY(0);
+  }
+  .nav-close-btn{
+    position: absolute;
+    font-size: 3.5rem;
+    top:8px;
+    right: 35px;
+  }
+}
+
+/* Für mittlere Bildschirme (Tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .navbar .responsive-nav{
+    transform: translateY(0);
+  }
+  
+  .navbar{
+    height: 100px;
+  }
+  .navbar .logo a{
+    letter-spacing: 2px;
+    font-size: 40px;
+    
+  }
+  .navbar .logo a > span{
+    font-size: 50px;
+  }
+  .navbar .shoop-icon{
+    left: 18px;
+    font-size: 46px;
+  }
+  .navbar .logo .shoop-icon .nummer-shooping{
+    top:-26px;
+    left: 6px;
+    font-size: 26px;
+  }
+  
+  .nav-btn{
+    display: block;
+    visibility:visible;
+    opacity: 1;
+    transition: .5s;
+    font-size: 45px;
+    color: var(--textcolor2);
+  }
+  .nav-close-btn{
+    position: absolute;
+    font-size: 5rem;
+    top:8px;
+    right: 35px;
+  }
+  .navbar nav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--bgc_main);
+    opacity: .9;
+    font-size: 3.5rem;
+    transition: .5s;
+    transform: translateY(-100%);
+  }
+}
+
+/* Für große Bildschirme (Laptops) */
+@media only screen and (min-width: 1024px) and (max-width: 1379px) {
+  .nav-btn{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navbar{
+    height: 70px;
+  }
+  .navbar .logo a{
+    letter-spacing: 2px;
+    font-size: 30px;
+    
+  }
+  .navbar .logo a > span{
+    font-size: 40px;
+  }
+  .navbar .shoop-icon{
+    left: 18px;
+    font-size: 36px;
+  }
+  .navbar .logo .shoop-icon .nummer-shooping{
+    top:-26px;
+    left: 6px;
+    font-size: 16px;
+  }
+  .navbar nav a{
+    padding-left: 1.2rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Für extra große Bildschirme (große Bildschirme) */
+@media only screen and (min-width: 1380px) {
+  .nav-btn{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navbar{
+    height: 80px;
+  }
+  .navbar .logo a{
+    
+    letter-spacing: 2px;
+    font-size: 34px;
+    
+  }
+  .navbar .logo a > span{
+    font-size: 44px;
+  }
+  .navbar .shoop-icon{
+    left: 18px;
+    font-size: 40px;
+  }
+  .navbar .logo .shoop-icon .nummer-shooping{
+    top:-26px;
+    left: 6px;
+    font-size: 16px;
+  }
+  .navbar nav a{
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
