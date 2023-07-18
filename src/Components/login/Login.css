@@ -1,0 +1,47 @@
+.btn-logout, .btn-login{
+    
+    font-size: 3.5rem;
+    position: relative;
+    top:5px;
+    right: 30px;
+}
+.btn-logout:hover, .btn-login:hover{
+    color: orange;
+}
+
+/*---------------- media----------------*/
+/* Für kleine Bildschirme (Handys) */
+@media only screen and (max-width: 767px) {
+    .btn-logout, .btn-login{
+        font-size: 2rem;
+        top:1px;
+        right: 20px;
+    }
+  }
+  
+  /* Für mittlere Bildschirme (Tablets) */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .btn-logout, .btn-login{
+        font-size: 3.5rem;
+        top:5px;
+        right: 35px;
+    }
+  }
+  
+  /* Für große Bildschirme (Laptops) */
+  @media only screen and (min-width: 1024px) and (max-width: 1379px) {
+    .btn-logout, .btn-login{
+        font-size: 3rem;
+        top:3px;
+        right: 20px;
+    }
+  }
+  
+  /* Für extra große Bildschirme (große Bildschirme) */
+  @media only screen and (min-width: 1380px) {
+    .btn-logout, .btn-login{
+        font-size: 3rem;
+        top:1px;
+        right: 20px;
+    }
+  }

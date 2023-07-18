@@ -1,8 +1,20 @@
 import React from 'react'
 import './Menufoods.css'
 
-export default function Menufoods() {
+//------import components
+import Article from '../../article/Article'
+
+export default function Menufoods({foods,addHandler}) {
+  console.log(foods)
   return (
-    <div>Menufoods</div>
+    <div className='container'>
+      <div className="foodList">
+          {
+            foods.map(food=>
+              (<Article key={food.id} {...food} addHandler={addHandler} />)
+            )
+          }
+      </div>
+    </div>
   )
 }

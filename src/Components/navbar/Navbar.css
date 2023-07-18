@@ -39,6 +39,14 @@
   .navbar .logo a > span{
     font-size: 34px;
   }
+  .navbar .nav-recht{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .navbar .nav-recht .login-btn{
+    font-size: 5rem;
+  }
   .navbar .shoop-icon{
     position: relative;
     color: #FFF;
@@ -126,6 +134,7 @@
 
 /* Für mittlere Bildschirme (Tablets) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  
   .navbar .responsive-nav{
     transform: translateY(0);
   }
