@@ -6,7 +6,7 @@ import { ShopContext } from "../../context/ShopContext";
 //-------- react icons
 import { MdDeleteOutline } from "react-icons/md";
 //--------- import react bootstarp
-import { Card, Button, Form, Row, Col, Container } from "react-bootstrap";
+import { Card, Button, Row, Col} from "react-bootstrap";
 
 export default function Article({ id, name, price, pic }) {
   const foodContext = useContext(ShopContext);
@@ -33,7 +33,7 @@ export default function Article({ id, name, price, pic }) {
                   -
                 </Button>
               </Col>
-              <Col xs={1} className=" fw-bold ">
+              <Col xs={2} className=" fw-bold ps-2 pt-2 text-center" >
                 {foodCoantity}
               </Col>
               <Col xs={3}>

@@ -6,20 +6,25 @@ import { Container, Navbar, Nav} from "react-bootstrap";
 
 //--------- Packge React Icons
 import { AiOutlineShoppingCart } from "react-icons/ai";
+//--------  components
+import Login from "../login/Login";
 
-
-export default function Navbars({ showShoppinglist }) {
+export default function Navbars({ showShoppinglist ,showlogin,islogin }) {
   //------ States
-  const [islogin, setIslogin] = useState(false);
+  // const [islogin, setIslogin] = useState(false);
   //------ shop context
   const shopContext=useContext(ShopContext);
 
   const quantityTotal=shopContext.shoppinglist.reduce((pre,current)=>pre+current.quantity,0);
   //------- functions
   
-  const toggleLog = () => {
-    setIslogin((pre) => !pre);
-  };
+  // const toggleLog = () => {
+  //   setIslogin((pre) => !pre);
+  // };
+  // const handelChange = () => {
+  //   toggleLog();
+  //   showlogin();
+  // };
 
   return (
   
@@ -33,7 +38,7 @@ export default function Navbars({ showShoppinglist }) {
             </Navbar.Brand>
             <div className="shoop-icon">
               <AiOutlineShoppingCart onClick={showShoppinglist} />
-              <div className="nummer-shooping me-4">{quantityTotal}</div>
+              <div className="nummer-shooping me-4">{quantityTotal>0?quantityTotal:''}</div>
             </div>
           </div>
           <Navbar.Toggle
@@ -49,8 +54,9 @@ export default function Navbars({ showShoppinglist }) {
               <Nav.Link className="link-item" href="/jobs">Jobs</Nav.Link>
             </Nav>
             <Nav>
-              <div className="user-log" onClick={toggleLog}>{islogin?'Logout':'Login'}</div>
-
+              
+              <div className="user-log" onClick={showlogin}>{islogin?'Logout':'Login'}</div>
+              
             </Nav>
           </Navbar.Collapse>
         </Container>

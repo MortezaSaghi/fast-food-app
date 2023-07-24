@@ -14,6 +14,18 @@
     
   }
 
+  .username-header{
+    width: 100vw;
+    text-align: center;
+  }
+  .header-video .username-class{
+    position: relative;
+    top:5rem;
+    color:rgb(255, 165, 0);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
   .menu_content{
     position: absolute;
     width: 100%;

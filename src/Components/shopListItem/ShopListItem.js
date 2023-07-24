@@ -5,6 +5,8 @@ import { Button, Row, Col } from "react-bootstrap"
 import {ShopContext} from '../../context/ShopContext'
 //-------import fooddata function
 import {getFoodData} from '../../data/items'
+//-----import Components
+import ButtonChangCoantity from '../button/ButtonChangCoantity'
 
 export default function ShopListItem({id,quantity}) {
     const shopContext=useContext(ShopContext)
@@ -12,8 +14,8 @@ export default function ShopListItem({id,quantity}) {
   return (
     <>
         <Row key={id}>
-                  <Col xs={4}>{foodData.name}</Col>
-                  <Col xs={2}>{quantity}</Col>
+                  <Col xs={3}>{foodData.name}</Col>
+                  <Col xs={3}><ButtonChangCoantity id={id} quantity={quantity}/></Col>
                   <Col xs={2}>{foodData.price} $</Col>
                   <Col xs={2}>
                     {quantity * foodData.price} $

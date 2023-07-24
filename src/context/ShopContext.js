@@ -60,6 +60,7 @@ export function ShopProvider({ children }) {
     shoppinglist.map((item) => {
       let foodData = getFoodData(item.id);
       totalAmount += item.quantity * foodData.price;
+      return item;
     });
     
     return totalAmount;
