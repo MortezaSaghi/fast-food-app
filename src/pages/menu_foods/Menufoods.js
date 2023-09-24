@@ -1,5 +1,5 @@
 
-// import './Menufoods.css'
+import './Menufoods.css'
 
 //------import components
 import Article from '../../Components/article/Article';
@@ -12,7 +12,7 @@ export default function Menufoods() {
   
   return (
     <>
-      <Container className='mt-5 pt-5'>
+      <Container className='container-menufood ' >
         <Row>
           {
             foodList.map(food=>

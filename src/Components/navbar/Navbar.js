@@ -56,6 +56,7 @@ export default function Navbars({ showShoppinglist ,showlogin,islogin }) {
             <Nav>
               
               <div className="user-log" onClick={showlogin}>{islogin?'Logout':'Login'}</div>
+              {/* <Nav.Link href="/" className="user-log" onClick={showlogin}>{islogin?'Logout':'Login'}</Nav.Link> */}
               
             </Nav>
           </Navbar.Collapse>

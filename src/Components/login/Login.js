@@ -78,7 +78,7 @@ export default function Login({ showlogin, setIslogin, setDataUserlogin }) {
           Login
         </Button>
         <NavLink to='/register'>
-        <Button variant="primary" onClick={showlogin} className="mt-4">
+        <Button variant="primary" onClick={showlogin} className="mt-4 ms-4">
               Register Me
           </Button>
         </NavLink>
